@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+// import { Container } from './styles';
 
 function App() {
+  const [validate, setValidate] = useState(true);
+  function handleClick() {
+    setValidate(!validate);
+
+    const teste = "Bruno";
+
+    return;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <button onClick={handleClick}>clique aqui</button>
+      <h1>{validate ? "Verdadeiro" : "Falso"}</h1>
+    </>
   );
 }
 
